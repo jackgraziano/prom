@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <h1>Cadastrar Cliente</h1>
+
+    <%= simple_form_for @client do |f| %>
+      <%= f.input :name, label: "Nome" %>
+      <%= f.input :phone, label: "Telefone" %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
+
