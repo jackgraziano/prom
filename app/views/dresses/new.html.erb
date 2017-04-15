@@ -1,0 +1,12 @@
+
+<div class="container">
+  <h1>New dress</h1>
+
+  <%= simple_form_for @dress do |f| %>
+    <%= f.input :name, label: 'Nome' %>
+    <%= f.input :size, label: 'Tamanho' %>
+    <%= f.input :color, label: 'Cor' %>
+    <%= f.input :obs, label: 'Observação' %>
+    <%= f.submit %>
+  <% end %>
+</div>
