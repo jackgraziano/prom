@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415210638) do
+ActiveRecord::Schema.define(version: 20170415212220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170415210638) do
     t.datetime "updated_at",                           null: false
     t.decimal  "rental_price", precision: 8, scale: 2
     t.decimal  "sale_price",   precision: 8, scale: 2
+    t.string   "photo"
   end
 
 end

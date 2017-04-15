@@ -36,3 +36,5 @@ gem "simple_form"
 gem "autoprefixer-rails"
 gem 'faker'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave'
