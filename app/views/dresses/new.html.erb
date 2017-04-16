@@ -8,7 +8,7 @@
       <%= simple_form_for @dress do |f| %>
         <%= f.input :name, label: 'Nome' %>
         <%= f.input :size, label: 'Tamanho' %>
-        <%= f.input :color, label: 'Cor' %>
+        <%= f.association :color %>
         <%= f.input :rental_price, label: 'Preço de aluguel', as: :currency, currency: "R$", :input_html => { :value => 0} %>
         <%= f.input :sale_price, label: 'Preço de Venda', as: :currency, currency: "R$", :input_html => { :value => 0} %>
         <%= f.input :obs, label: 'Observação' %>
