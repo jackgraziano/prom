@@ -6,9 +6,11 @@
       <% @dresses.each do |dress| %>
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="dress-card">
-            <h5><%= dress.name.capitalize %></h5>
+            <h5>
+              <div class="card-round-color" style="background-color: <%= dress.color.code%>"></div>
+              <%= dress.name.capitalize %>
+            </h5>
             <%= cl_image_tag dress.photo, height: 300, width: 250, crop: :fill %>
-            <p><%= dress.color.name %></p>
             <%= link_to '', dress_path(dress.id) %>
           </div>
         </div>

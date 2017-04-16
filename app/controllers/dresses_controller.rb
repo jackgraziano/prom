@@ -21,6 +21,19 @@ class DressesController < ApplicationController
     @dress = Dress.find(params[:id])
   end
 
+  def edit
+    @dress = Dress.find(params[:id])
+  end
+
+  def update
+    @dress = Dress.find(params[:id])
+    if @dress.update(params_dress)
+      redirect_to dress_path(@dress)
+    else
+      render 'dresses/edit'
+    end
+  end
+
   private
   def params_dress
     params.require(:dress).permit(:name, :size, :color_id, :obs, :rental_price, :sale_price, :photo, :photo_cache)
