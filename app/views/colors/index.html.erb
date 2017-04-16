@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Colors</h1>
+
+  <div>
+    <%= link_to 'Adicionar Cor', new_color_path, class:'btn btn-info' %>
+  </div>
+
+  <% @colors.each do |color| %>
+    <div class="row col-xs-12 col-sm-3">
+      <div class="color-card">
+        <div class="color-demo" style="background-color: <%= color.code %>"></div>
+        <p><%= color.name.capitalize %></p>
+        <%= link_to '', edit_color_path(color) %>
+      </div>
+    </div>
+  <% end %>
+
+</div>
+

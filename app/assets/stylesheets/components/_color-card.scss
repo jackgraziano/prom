@@ -1,0 +1,39 @@
+.color-card{
+  height: 200px;
+  text-align: center;
+  background-color: #fffafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 15px;
+  position: relative;
+}
+
+.color-demo{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.color-card p{
+  font-size: 20px;
+  font-family: 'Raleway';
+  padding: 10px;
+}
+
+.color-card a{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+}
+
+.color-card:hover{
+  background-color: #EBF2FA;
+}
