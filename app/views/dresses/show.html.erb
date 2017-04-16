@@ -1,4 +1,11 @@
 <div class="container">
-  <h1>Show dress</h1>
-  <%= @dress.name %>
+  <h1><%= @dress.name %></h1>
+  <p>Código: <%= @dress.id %> </p>
+  <p>Tamanho: <%= @dress.size %> </p>
+  <p>Cor: <%= @dress.color %></p>
+  <p>Preço para aluguel: <%= @dress.rental_price %></p>
+  <p>Preço para venda:<%= @dress.sale_price %></p>
+  <p><%= @dress.obs %></p>
+  <%= cl_image_tag @dress.photo %>
+
 </div>

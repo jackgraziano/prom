@@ -1,4 +1,9 @@
 class DressesController < ApplicationController
+
+  def index
+    @dresses = Dress.all
+  end
+
   def new
     @dress = Dress.new
   end
@@ -18,11 +23,7 @@ class DressesController < ApplicationController
 
   private
   def params_dress
-    params.require(:dress).permit(:name, :size, :color, :obs)
-  end
-
-  def index
-    @dresses = Dress.all
+    params.require(:dress).permit(:name, :size, :color, :obs, :rental_price, :sale_price, :photo, :photo_cache)
   end
 
 end

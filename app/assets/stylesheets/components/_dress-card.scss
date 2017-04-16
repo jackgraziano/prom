@@ -1,0 +1,39 @@
+// https://coolors.co/25283d-8f3985-a675a1-cea2ac-efd9ce
+
+.dress-card{
+  text-align: center;
+  background-color: #CEA2AC;
+  margin-top: 10px;
+  height: 400px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dress-card h5{
+  color: #25283D;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.dress-card img{
+  border-radius: 10px;
+}
+
+.dress-card a{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+  }
+
+.dress-card:hover{
+  background-color: #A675A1;
+}

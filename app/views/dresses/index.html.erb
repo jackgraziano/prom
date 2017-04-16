@@ -1,1 +1,18 @@
-<h1>All dresses </h1>
+<div class="container">
+  <h1>Vestidos</h1>
+  <%= link_to 'Adicionar Vestido', new_dress_path, class:'btn btn-primary' %>
+  <div class="row">
+    <div class="dress-grid">
+      <% @dresses.each do |dress| %>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="dress-card">
+            <h5><%= dress.name.capitalize %></h5>
+            <%= cl_image_tag dress.photo, height: 250, width: 200, crop: :fill %>
+            <p><%= dress.color.capitalize %></p>
+            <%= link_to '', dress_path(dress.id) %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
