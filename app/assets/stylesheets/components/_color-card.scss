@@ -39,8 +39,21 @@
 }
 
 .card-round-color{
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: inline-block;
+  border: solid 1px;
+  position: relative;
+}
+
+.card-round-color a{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
 }

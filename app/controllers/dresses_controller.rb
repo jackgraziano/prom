@@ -1,7 +1,12 @@
 class DressesController < ApplicationController
 
   def index
-    @dresses = Dress.all
+    @colors = Color.all # for filtering
+    if params[:color_id]
+      @dresses = Dress.where(color: Color.find(params[:color_id]))
+    else
+      @dresses = Dress.all
+    end
   end
 
   def new

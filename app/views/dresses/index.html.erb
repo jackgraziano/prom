@@ -2,6 +2,13 @@
   <h1>Vestidos</h1>
   <%= link_to 'Adicionar Vestido', new_dress_path, class:'btn btn-primary' %>
   <div class="row">
+
+    <% @colors.each do |color| %>
+      <div class="card-round-color" style="background-color: <%= color.code%>">
+        <%= link_to "", dresses_path(color_id: color.id) %>
+      </div>
+    <% end %>
+
     <div class="dress-grid">
       <% @dresses.each do |dress| %>
         <div class="col-xs-12 col-sm-6 col-md-3">
